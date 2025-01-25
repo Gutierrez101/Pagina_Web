@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FusionVibes Store</title>
+    <link rel="stylesheet" href="/css/shop.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <script src="/js/script.js" defer></script>
+    <script src="/js/html2canvas.js"></script>
+    <script src="/js/jspdf.debug.js"></script>
+    <script src="/js/jspdf.plugin.autotable.min.js"></script>
+   
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <div class="header-container">
+            <h1 class="logo">FusionVibes</h1>
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar">
+            </div>
+            <nav class="nav-menu">
+                <a href="#">Inicio</a>
+                <a href="#">Categoría</a>
+                <a href="#">Rastrear Producto</a>
+                <a href="#">Conósenos</a>
+            </nav>
+            <div class="user-actions">
+                <button>Tu carrito</button>
+                <button id="btnLogin">Ingresar</button>
+            </div>
+            
+        </div>
+    </header>
+ 
+    <div id="login-container"></div>
+
+    <!-- Contenido principal -->
+    <main>
+        <!-- Filtros -->
+        <aside class="Filtrar">
+            <h2>Filtrar Productos</h2>
+            <div>
+                <label for="buscar">Buscar:</label>
+                <input type="text" id="buscar">
+            </div>
+            <div>
+                <label for="model">Todos los Modelos:</label>
+                <select id="model">
+                    <option value="all">Todos</option>
+                </select>
+            </div>
+            <div>
+                <label for="price">Precio:</label>
+                <input type="range" id="price" min="0" max="100" step="5">
+                <span id="price-value">$0.00</span> <!-- Elemento añadido -->
+            </div>
+        </aside>
+
+        <!-- Productos -->
+        <section class="products-container">
+            <h2>Productos</h2>
+            <div id="products-list"class="products">
+                <div class="product" data-model="A" data-price="40.00">
+                    <img src="/Images/tecnology/Echo_Pop.webp" alt="Echo Pop">
+                    <h3>Echo Pop</h3>
+                    <p>Precio: $40.00</p>
+                    <button class="carrito_button">Añadir al carrito</button>
+                    <button class="Contactar">Contactanos</button>
+                </div>
+                <div class="product" data-model="A" data-price="50.00">
+                    <img src="/Images/tecnology/Echo Dot.jpg" alt="Echo Dot">
+                    <h3>Echo Dot</h3>
+                    <p>Precio: $50.00</p>
+                    <button class="carrito_button">Añadir al carrito</button>
+                    <button class="Contactar">Contactanos</button>
+                </div>
+                <div class="product" data-model="A" data-price="80.00">
+                    <img src="/Images/tecnology/Echo Show.webp" alt="Echo Show">
+                    <h3>Echo Show</h3>
+                    <p>Precio: $80.00</p>
+                    <button class="carrito_button">Añadir al carrito</button>
+                    <button class="Contactar">Contactanos</button>
+                </div>
+                <div class="product" data-model="B" data-price="15.00">
+                    <img src="/Images/pictures/Soro.jpg" alt="Soro">
+                    <h3>Zoro</h3>
+                    <p>Precio: $15.00</p>
+                    <button class="carrito_button">Añadir al carrito</button>
+                    <button class="Contactar">Contactanos</button>
+                </div>
+                <div class="product" data-model="B" data-price="12.00">
+                    <img src="/Images/pictures/Killua.jpg" alt="Killua">
+                    <h3>Killua</h3>
+                    <p>Precio: $12.00</p>
+                    <button class="carrito_button">Añadir al carrito</button>
+                    <button class="Contactar">Contactanos</button>
+                </div>
+                <div class="product" data-model="B" data-price="10.00">
+                    <img src="/Images/pictures/Levi.jpg" alt="Levi">
+                    <h3>Levi</h3>
+                    <p>Precio: $10.00</p>
+                    <button class="carrito_button">Añadir al carrito</button>
+                    <button class="Contactar">Contactanos</button>
+                </div>
+            </div>
+
+            <!-- Paginación -->
+            <div class="pagination">
+                <button>&lt;</button>
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>&gt;</button>
+            </div>
+        </section>
+    </main>
+    <script src="/js/filtrar.js"></script>
+    <style>
+        .whatsapp-logo {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+    </style>
+    <a href="https://wa.me/+593995834206" target="_blank">
+        <img src="/Images/whatsapp.png" alt="WhatsApp" class="whatsapp-logo">
+    </a>
+    
+    <!-- Pie de página -->
+    <footer>
+        <div class="footer-container">
+            <div class="locations">
+                <h4>Ubicaciones</h4>
+                <p>Dirección 1</p>
+                <p>Dirección 2</p>
+            </div>
+            <div class="menu">
+                <h4>Menú</h4>
+                <p>Inicio</p>
+                <p>Categoría</p>
+            </div>
+            <div class="discover">
+                <h4>Discover</h4>
+                <p>Nuestra Historia</p>
+            </div>
+            <div class="social">
+                <h4>Síguenos</h4>
+                <p>Facebook</p>
+                <p>Instagram</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+
