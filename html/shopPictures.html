@@ -6,7 +6,9 @@
     <title>FusionVibes Store</title>
     <link rel="stylesheet" href="/css/shop.css">
     <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/carrito.css">
     <script src="/js/script.js" defer></script>
+    <script src="/js/carrito_pro.js" defer></script>
     <script src="/js/html2canvas.js"></script>
     <script src="/js/jspdf.debug.js"></script>
     <script src="/js/jspdf.plugin.autotable.min.js"></script>
@@ -27,13 +29,21 @@
                 <a href="#">Conósenos</a>
             </nav>
             <div class="user-actions">
-                <button>Tu carrito</button>
+                <button id="btnCarrito">Tu carrito</button>
                 <button id="btnLogin">Ingresar</button>
             </div>
             
         </div>
     </header>
- 
+    <div id="carritoM" class="modal">
+        <div class="contenedor">
+            <span class="cerrado">&times;</span>
+            <h2>Tu carrito</h2>
+            <img src="/Images/entrega.png" width="50" height="50">
+            <p>No tienes Productos en el carrito aun</p>
+            <button class="checkout-btn">Ir a pagar</button>
+        </div>
+    </div>
     <div id="login-container"></div>
 
     <!-- Contenido principal -->
